@@ -1,8 +1,5 @@
 name: Deploy React App
 
-env:
-     CI: false
-
 on:
   # Runs on pushes targeting the default branch
   push:
@@ -39,6 +36,8 @@ jobs:
         run: yarn install --frozen-lockfile
       - name: Build
         run: yarn build
+        env:
+          CI: false
       - name: Export
         run: yarn export
       - name: Upload artifact
