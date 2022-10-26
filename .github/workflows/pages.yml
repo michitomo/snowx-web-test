@@ -1,5 +1,8 @@
 name: Deploy React App
 
+env:
+     CI: false
+
 on:
   # Runs on pushes targeting the default branch
   push:
